@@ -5,6 +5,7 @@ confinement: strict
 base: core22
 architectures:
   - build-on: amd64
+  - build-on: arm64
 
 layout:
   /usr/share/drawing:
@@ -31,16 +32,10 @@ apps:
 parts:
   drawing:
     source: https://github.com/maoschanz/drawing.git
-    source-tag: 1.0.1
+    source-tag: 1.0.2
     plugin: meson
     meson-parameters:
       - --prefix=/usr
     parse-info: [usr/share/metainfo/com.github.maoschanz.drawing.appdata.xml]
     organize:
       snap/drawing/current/usr: usr
-    build-packages: [ git ]
-    #stage-packages:
-    #  - libpython3.10-minimal
-    override-pull: |
-      craftctl default
-      craftctl set version=$(git describe --tags --abbrev=10)
