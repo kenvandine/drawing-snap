@@ -3,6 +3,10 @@ adopt-info: drawing
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict
 base: core24
+contact: https://github.com/kenvandine/drawing-snap/issues
+issues: https://github.com/kenvandine/drawing-snap/issues
+website: https://maoschanz.github.io/drawing/
+
 platforms:
   amd64:
   arm64:
