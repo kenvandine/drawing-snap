@@ -44,4 +44,4 @@ parts:
     parse-info: [usr/share/metainfo/com.github.maoschanz.drawing.appdata.xml]
     override-prime: |
       craftctl default
-      sed -i -e 's|/snap/gnome-42-2204-sdk/current/usr/bin/python3|/usr/bin/env python3|g' usr/bin/drawing
+      sed -i -e 's|/snap/gnome-46-2404-sdk/current/usr/bin/python3|/usr/bin/env python3|g' usr/bin/drawing
